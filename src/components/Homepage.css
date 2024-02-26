@@ -1,0 +1,240 @@
+.header{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    position: fixed;
+    z-index: 1;
+    background-color: black;
+}
+
+.mobile-header{
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-container{
+    width: 100%;
+    align-items: center;
+    height: 50px;
+}
+.logo-container > img{
+    width: 50px;
+    height: 40px;
+}
+
+
+.form-on{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    right: 10px;
+    border-radius: 20px;
+}
+
+.form-on > img{
+    width: 30px;
+    height: 30px;
+}
+
+.mobile-form{
+    width: 100%;
+    background-color: rgb(44, 33, 33);
+    border-radius: 20px;
+    margin: 5px 0;
+}
+.form-off{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.form-off > img{
+    width: 30px;
+    height: 30px;
+}
+.window-default-view{
+    display: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.window-default-view > img{
+    width: 30px;
+    height: 30px;
+}
+
+.input{
+    width: calc(100% - 30px);
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    padding-left: 20px;
+}
+.search-button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.search-button > img{
+    width: 30px;
+    height: 30px;
+}
+
+.form-off:hover,
+.form-on:hover,
+.window-default-view:hover,
+.search-button:hover{
+    background-color: rgb(69, 67, 67);
+}
+
+/*=============================================================*/
+
+.home{
+    width: 100%;
+}
+
+.video-loading{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.major{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.major-section{
+    width: 99%;
+    display: grid;
+    justify-items: center;
+    margin-top: 5px;
+    padding-bottom: 20px;
+}
+
+.video-container{
+    width: 100%;
+    margin-top: 30px;
+    padding: 0 5px;
+    box-sizing: border-box;
+}
+.video-anchor{
+    text-decoration: none;
+    color: white;
+    width: 100%;
+}
+
+.thumbnail-container,.thumbnail{
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.info-container{
+    width: 100%;
+    display: flex;
+}
+
+.info-container2{
+    width: calc(100% - 60px);
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+.info-container2 p{
+    color: rgb(176, 165, 165);
+    line-height: 0.6;
+    display: inline;
+    margin-right: 20px;
+}
+
+.channel-logo{
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    margin-top: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+/*=============================================================*/
+
+.ads{
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+/*=============================================================*/
+
+@media(min-width: 450px)
+{
+    .major-section{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(min-width: 550px)
+{
+    .window-default-view{
+        display: flex;
+    }
+    .logo-container{
+        width: auto;
+        position: fixed;
+        left: 5%;
+    }
+    .form-on, .form-off{
+        display: none;
+    }
+    .mobile-form{
+        display: flex;
+        width: 50%;
+    }
+}
+
+/*=============================================================*/
+
+@media(min-width: 992px)
+{
+    .major-section{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/*=============================================================*/
+
+@media(min-width: 1400px)
+{
+    .major-section{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/*=============================================================*/
+
+@media(min-width: 1800px)
+{
+    .major-section{
+        grid-template-columns: repeat(5, 1fr);
+    }
+}

@@ -1,4 +1,4 @@
-Welcome to our video streaming platform project, built using React JS and the YouTube API. Our platform is designed to provide a user-friendly interface for searching videos. We look forward to playing the videos on our own platform by using the React Player library to embed videos in our platform in future updates.
+Welcome to our video streaming platform project, built using React JS and the YouTube API. Our platform is designed to provide a user-friendly interface for searching and watching videos.
 
 
 Technology Stack:
@@ -17,4 +17,4 @@ Our platform provides a user-friendly search interface that allows users to sear
 
 Conclusion:
 
-In conclusion, our video streaming platform project using React JS and the YouTube API is a powerful tool for users to enjoy  videos. Our platform provides a user-friendly interface for searching videos. We hope that you enjoy using our platform and find it to be a valuable tool for you.
+In conclusion, our video streaming platform project using React JS and the YouTube API is a powerful tool for users to enjoy  videos. Our platform provides a user-friendly interface for searching and watching videos. We hope that you enjoy using our platform and find it to be a valuable tool for you.

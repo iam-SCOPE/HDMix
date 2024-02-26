@@ -1,0 +1,13 @@
+.notfound{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.notfound-link{
+    text-decoration: none;
+}
