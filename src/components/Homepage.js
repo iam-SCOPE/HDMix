@@ -113,7 +113,7 @@ export default function HomePage()
                 <div className='mobile-header'>
                     <div className='logo-container' style={{display: showForm ? 'none' : 'flex'}}>
                         <img src='https://webst-images.s3.eu-north-1.amazonaws.com/video-icon.png' alt='video icon' className='video-logo' />
-                        <h1>Video</h1>
+                        <h1>HDMix</h1>
                         <button onClick={displayForm} className='form-on'><img src='https://webst-images.s3.eu-north-1.amazonaws.com/white-search-icon.png' alt='search icon' /></button>
                     </div>
 
