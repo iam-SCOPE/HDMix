@@ -18,3 +18,5 @@ Our platform provides a user-friendly search interface that allows users to sear
 Conclusion:
 
 In conclusion, our video streaming platform project using React JS and the YouTube API is a powerful tool for users to enjoy  videos. Our platform provides a user-friendly interface for searching and watching videos. We hope that you enjoy using our platform and find it to be a valuable tool for you.
+
+Available for view at https://hdmix.netlify.app
