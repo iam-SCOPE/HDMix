@@ -101,7 +101,7 @@ export default function HomePage(){
                     {showVideo}
                 </div>
             </main>
-            <div className='ads'>Developed by Scope</div>
+            <div className='ads'>Developed by Richard</div>
         </div>
     )
 }
