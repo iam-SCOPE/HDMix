@@ -11,8 +11,8 @@ export default function HomePage(){
     const navigate = useNavigate();
 
     useEffect(() => {
-        apiFetch('')
-    }, [])
+        apiFetch('');
+    }, []);
 
     function displayForm()
     {

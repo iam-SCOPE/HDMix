@@ -8,7 +8,7 @@ export default function SearchedVideoList(){
     const [showVideo, setShowVideo] = useState('');
 
     useEffect(() => {
-        apiFetch(search);
+        apiFetch(localStorage.getItem('searchedVideo'));
     }, []);
 
     function handleEnterkeyPress(e){
