@@ -1,14 +1,14 @@
 import './Homepage.css'
 import {useState, useEffect} from 'react';
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 
 
 export default function HomePage(){
     
     const [showForm, setShowForm] = useState(false);
-    const [search, setSearch] = useState('')
+    const [search, setSearch] = useState('');
     const [showVideo, setShowVideo] = useState(<div className='video-loading'><h2>Please wait while we fetch you videos...</h2><h3>Kindly note that we fetch data from the Youtube API</h3></div>)
-
+    const navigate = useNavigate();
 
     useEffect(() => {
         apiFetch('')
@@ -17,19 +17,6 @@ export default function HomePage(){
     function displayForm()
     {
         setShowForm(!showForm);
-    }
-
-
-    function handleDisplayAndDefaultview(){
-        if(search === '')
-        {
-            displayForm()
-        }
-        else
-        {
-            displayForm()
-            apiFetch('')
-        }
     }
 
     function handleEnterkeyPress(e){
@@ -42,7 +29,8 @@ export default function HomePage(){
             }
             else{
                 e.preventDefault()
-                apiFetch(search)
+                localStorage.setItem('searchedVideo', search); 
+                navigate('/searchedvideo', {replace: false});
             }
         }
     }
@@ -88,10 +76,10 @@ export default function HomePage(){
 
 
                     <form autoComplete='off' className='mobile-form' style={{display: window.innerWidth < 551 ? showForm ? 'flex' : 'none' : 'flex'}}>
-                        <button className='form-off' onClick={(e) => {e.preventDefault(); handleDisplayAndDefaultview()}}><img src='https://webst-images.s3.eu-north-1.amazonaws.com/arrow-back.png' alt='back icon'/></button>
+                        <button className='form-off' onClick={(e) => {e.preventDefault(); displayForm()}}><img src='https://webst-images.s3.eu-north-1.amazonaws.com/arrow-back.png' alt='back icon'/></button>
                         <button className='window-default-view' onClick={(e) => {e.preventDefault(); setSearch(''); apiFetch('')}} style={{visibility: search.length < 1 ? 'hidden' : 'visible'}}><img src='https://webst-images.s3.eu-north-1.amazonaws.com/white-close-icon.png' alt='cancel search icon'/></button>
                         <input type='text' placeholder='Search Videos' className='input' value={search} onKeyDown={handleEnterkeyPress} onChange={(e) => setSearch(e.target.value)} />
-                        <button disabled={search.length === 0} type='submit' onClick={(e) => {e.preventDefault(); apiFetch(search)}} className='search-button'><img src='https://webst-images.s3.eu-north-1.amazonaws.com/white-search-icon.png' alt='search icon'/></button>
+                        <button disabled={search.length === 0} type='submit' onClick={() => {localStorage.setItem('searchedVideo', search); navigate('/searchedvideo', {replace: false});}} className='search-button'><img src='https://webst-images.s3.eu-north-1.amazonaws.com/white-search-icon.png' alt='search icon'/></button>
                     </form>
                 </div>
             </header>

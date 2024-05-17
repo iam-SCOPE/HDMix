@@ -1,0 +1,46 @@
+/*Mobile first design*/
+
+.video-list{
+    width: 100%;
+}
+
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 5px 0;
+    position: fixed;
+    z-index: 1;
+    background-color: black;
+}
+
+.search-form{
+    width: 95%;
+    display: flex;
+    border-radius: 30px;
+    border: 1px solid grey;
+}
+
+.input{
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.search-button{
+    width: 60px;
+    background-color: grey;
+}
+
+/*=======================================*/
+
+@media(min-width: 800px){
+    .search-form{
+        width: 80%;
+    }
+}
+
+@media(min-width: 1400px){
+    .search-form{
+        width: 70%;
+    }
+}
